@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<script src="dynamicCssVars.js"></script>
+</head>
+<body>
+
+<style>
+.mystuff {
+  background:var(--bcolor, blue); /*default blue*/
+  height:200px
+}
+.otherstuff {
+  background:var(--bcolor, red); /*default red*/
+  height:200px
+}
+</style>
+
+<div class="mystuff"></div>
+<div class="otherstuff"></div>
+
+<script>
+let el = document.querySelector(".mystuff")
+elVars = new dynamicCssVars(el)
+
+let otherel = document.querySelector(".otherstuff")
+otherVars = new dynamicCssVars(otherel)
+otherVars.setVar("bcolor", "brown")
+
+setTimeout(_=>elVars.setVar("bcolor","red"), 2000)
+setTimeout(_=>elVars.setVar("bcolor","black"), 4000)
+setTimeout(_=>elVars.deleteVar("bcolor"), 6000)
+setTimeout(_=>elVars.setVar("bcolor","green"), 8000)
+setTimeout(_=>elVars.dispose(), 10000)
+</script>
+</body>
+</html>
