@@ -1,5 +1,5 @@
-# dynamicCssVars
-dynamically create and modify css variables
+# DynamicCssVars
+Dynamically create and modify css variables. Make the variables scoped to the specified element. Use the variables in your css.
 
 ## example
 
@@ -18,7 +18,7 @@ dynamically create and modify css variables
 
 
 let el = document.querySelector(".mystuff")
-elVars = new dynamicCssVars(el)
+elVars = new DynamicCssVars(el)
 
 elVars.setVar("bcolor", "brown")
 elVars.setVar("mSize", "35px")

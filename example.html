@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<script src="dynamicCssVars.js"></script>
+<script src="dynamiccssvars.js"></script>
 </head>
 <body>
 
@@ -21,10 +21,10 @@
 
 <script>
 let el = document.querySelector(".mystuff")
-elVars = new dynamicCssVars(el)
+elVars = new DynamicCssVars(el)
 
 let otherel = document.querySelector(".otherstuff")
-otherVars = new dynamicCssVars(otherel)
+otherVars = new DynamicCssVars(otherel)
 otherVars.setVar("bcolor", "brown")
 
 setTimeout(_=>elVars.setVar("bcolor","red"), 2000)

@@ -1,4 +1,4 @@
-class dynamicCssVars
+class DynamicCssVars
 {
     constructor(el, className)
     {
