@@ -1,6 +1,9 @@
 # DynamicCssVars
 Dynamically create and modify css variables. Make the variables scoped to the specified element. Use the variables in your css.
 
+### calm down, it's for special cases ;)
+Normally you'd just toggle a few classes with CSS variables to change the values of the variables.  This class is needed only when you need to modify the values, such as when a margin value is calculated in js and needs to be applied in css, or when a color comes dynamically in js and will likely change later, or an image name is specified in code.  If your vars don't need to change to abritrary values throughout the program execution, you should just create a stylesheet and insert it, or make several values and use css classes to toggle them.
+
 ## example
 
 ```js
